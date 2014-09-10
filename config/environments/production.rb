@@ -79,4 +79,10 @@ Reservations::Application.configure do
 
   # set up PartyFoul
   config.middleware.use('PartyFoul::Middleware')
+
+  # HEROKU SETTINGS
+  config.cache_classes = true
+  config.serve_static_assets = true
+  config.assets.compile = true
+  config.assets.digest = true
 end
