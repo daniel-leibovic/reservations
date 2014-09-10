@@ -99,3 +99,6 @@ group :production, :staging do
   gem 'dotenv-deployment'
   gem 'pg'
 end
+
+# for Heroku
+gem 'rails_12factor', group: :production
