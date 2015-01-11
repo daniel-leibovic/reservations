@@ -71,6 +71,10 @@ module CartValidations
   end
 
   def check_max_items(count_hash, relevant, count_method)
+    # generic method for making sure the count_hash doesn't
+    # contain more than the item max when taking into account
+    # the relevant reservations
+
     errors = []
     count_hash.each do |item, q|
       max = item.maximum_per_user
@@ -86,6 +90,9 @@ module CartValidations
   end
 
   def check_max_ems
+    # check to make sure that the cart's EMs + the current resever's
+    # EMs doesn't exceed any limits
+
     count_hash = get_items
     relevant = Reservation.for_reserver(reserver_id).not_returned
                .includes(:equipment_model).all
@@ -93,6 +100,9 @@ module CartValidations
   end
 
   def check_max_cat
+    # same but for categories. we need to build the counts of the
+    # categories ourselves though
+
     cat_hash = {}
     ems = EquipmentModel.where(id: items.keys)
     items.each_with_index do |_em_id, q, index|
@@ -100,7 +110,7 @@ module CartValidations
       cat_hash[ems[index].category] += q
     end
     relevant = Reservation.for_reserver(reserver_id).not_returned
-                .with_categories.all
+               .with_categories.all
     check_max_items(cat_hash, relevant, :number_for_category_on_date)
   end
 
