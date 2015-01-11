@@ -47,7 +47,7 @@ class Reservation < ActiveRecord::Base
     count = 0
     reservations.each do |r|
       if r.start_date.to_date <= date && r.due_date.to_date >= date &&
-         r.equipment_model.category_id == category_id
+         r.category_id == category_id
         count += 1
       end
     end
