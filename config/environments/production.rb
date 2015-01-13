@@ -68,7 +68,7 @@ Reservations::Application.configure do
   config.assets.digest = true
 
   # Defaults to Rails.root.join("public/assets")
-  config.assets.manifest = Rails.root.join('public/assets')
+  # config.assets.manifest = Rails.root.join('public/assets')
 
   # Precompile additional assets (application.js, application.css, and all
   # non-JS/CSS are already added)
