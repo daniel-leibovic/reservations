@@ -75,5 +75,5 @@ Reservations::Application.configure do
   config.assets.precompile += %w(print.css)
 
   # set up PartyFoul
-  config.middleware.use('PartyFoul::Middleware')
+  config.middleware.use('PartyFoul::Middleware') if ENV['PARTY_FOUL_TOKEN']
 end
