@@ -43,11 +43,12 @@ class Ability
         can :view_all_dates, Reservation
       when 'guest'
         # rubocop:disable BlockNesting
-        if AppConfig.first.enable_guests
+        if AppConfig.first && AppConfig.first.enable_guests
           can :read, EquipmentModel
           can :empty_cart, :all
           can :update_cart, :all
-          can :create, User if AppConfig.first.enable_new_users
+          can :create, User if AppConfig.first &&
+                               AppConfig.first.enable_new_users
         end
         # rubocop:enable BlockNesting
       when 'banned'
