@@ -21,7 +21,11 @@ gem 'cancancan'
 # scheduling
 gem 'whenever'
 
+# administrative panel
 gem 'rails_admin'
+
+# data faking (for seed script in production)
+gem 'ffaker'
 
 # ldap integration
 gem 'net-ldap'
@@ -60,7 +64,6 @@ group :development, :test do
   gem 'fuubar', '~> 2.0.0rc1'
   gem 'guard-livereload'
   gem 'yajl-ruby'
-  gem 'ffaker'
   gem 'capistrano',  '~> 3.1'
   gem 'capistrano-bundler', '~> 1.1.2'
   gem 'capistrano-rails', '~> 1.1'
