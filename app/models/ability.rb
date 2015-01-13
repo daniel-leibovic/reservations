@@ -47,8 +47,7 @@ class Ability
           can :read, EquipmentModel
           can :empty_cart, :all
           can :update_cart, :all
-          can :create, User if AppConfig.first &&
-                               AppConfig.first.enable_new_users
+          can :create, User if AppConfig.first.enable_new_users
         end
         # rubocop:enable BlockNesting
       when 'banned'
