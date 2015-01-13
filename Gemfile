@@ -95,7 +95,7 @@ end
 
 group :production, :staging do
   gem 'therubyracer', require: 'v8'
-  gem 'party_foul'
+  gem 'party_foul' if ENV['PARTY_FOUL_TOKEN']
   gem 'dotenv-deployment'
   gem 'pg'
 end
