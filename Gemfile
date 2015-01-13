@@ -24,8 +24,9 @@ gem 'whenever'
 # administrative panel
 gem 'rails_admin'
 
-# data faking (for seed script in production)
+# seed script gems
 gem 'ffaker'
+gem 'ruby-progressbar'
 
 # ldap integration
 gem 'net-ldap'
@@ -69,7 +70,6 @@ group :development, :test do
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-rvm'
   gem 'awesome_print'
-  gem 'ruby-progressbar'
   gem 'codeclimate-test-reporter'
   gem 'database_cleaner'
   gem 'rubocop', require: false
