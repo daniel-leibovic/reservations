@@ -50,6 +50,6 @@
   },
   "addons": [
     "mandrill",
-    "scheduler: standard"
+    "scheduler:standard"
   ]
 }
