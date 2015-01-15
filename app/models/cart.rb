@@ -60,11 +60,10 @@ class Cart
     reservations = []
     @items.each do |id, quantity|
       quantity.times do
-        reservations << Reservation.new(
-          reserver: reserver,
-          start_date: Date.parse("#{@start_date.to_date}").to_time,
-          due_date: Date.parse("#{@due_date.to_date}").to_time,
-          equipment_model_id: id)
+        reservations << Reservation.new(reserver: reserver,
+                                        start_date: @start_date,
+                                        due_date: @due_date,
+                                        equipment_model_id: id)
       end
     end
     reservations
