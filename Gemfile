@@ -97,7 +97,7 @@ group :development do
   gem 'travis'
 end
 
-group :production, :staging do
+group :production do
   gem 'therubyracer', require: 'v8'
   gem 'party_foul'
   gem 'dotenv-deployment'
@@ -105,7 +105,5 @@ group :production, :staging do
   gem 'pg'
   gem 'unicorn'
   gem 'rack-timeout'
+  gem 'rails_12factor'
 end
-
-# for Heroku
-gem 'rails_12factor', group: :production
