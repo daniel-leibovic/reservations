@@ -1,6 +1,6 @@
 {
   "name": "Reservations Example",
-  "description": "An example of the Reservations app. Please set an app name so you can define the RAILS_HOST_NAME parameter below. For more detailed instructions visit: https://github.com/YaleSTC/reservations/wiki/Heroku-Deployment-Guide",
+  "description": "An example of the Reservations app. Before continuing please visit: https://github.com/YaleSTC/reservations/wiki/Heroku-Deployment-Guide",
   "keywords": ["Rails"],
   "repository": "https://github.com/YaleSTC/reservations",
   "website": "http://yalestc.github.io/reservations",
