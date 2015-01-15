@@ -42,12 +42,12 @@
       "value": "1"
     },
     "RES_SMTP_USERNAME": {
-      "description": "SMTP authentication username. You'll have to fill this in post-deployment for e-mail to work.",
-      "required": false
+      "description": "SMTP authentication username",
+      "value": "(fill in MANDRIL_USERNAME post-deployment)"
     },
     "RES_SMTP_PASSWORD": {
-      "description": "SMTP authentication password. You'll have to fill this in post-deployment for e-mail to work.",
-      "required": false
+      "description": "SMTP authentication password",
+      "value": "(fill in MANDRIL_APIKEY post-deployment)"
     }
   },
   "addons": [
