@@ -1,6 +1,6 @@
 {
   "name": "Reservations Example",
-  "description": "An example of the Reservations app",
+  "description": "An example of the Reservations app. Please set an app name so you can define the RAILS_HOST_NAME parameter below.",
   "keywords": ["Rails"],
   "repository": "https://github.com/YaleSTC/reservations",
   "website": "http://yalestc.github.io/reservations",
@@ -23,7 +23,7 @@
       "generator": "secret"
     },
     "RAILS_HOST_NAME": {
-      "description": "the host name for your application (e.g. example.com)"
+      "description": "the host name for your application (e.g. APP_NAME.herokuapp.com)"
     },
     "RES_SMTP_DOMAIN": {
       "description": "SMTP server domain",
@@ -42,10 +42,12 @@
       "value": "1"
     },
     "RES_SMTP_USERNAME": {
-      "description": "SMTP authentication username"
+      "description": "SMTP authentication username. You'll have to fill this in post-deployment for e-mail to work.",
+      "required": "false"
     },
     "RES_SMTP_PASSWORD": {
-      "description": "SMTP authentication password"
+      "description": "SMTP authentication password. You'll have to fill this in post-deployment for e-mail to work.",
+      "required": "false"
     }
   },
   "addons": [
