@@ -43,11 +43,11 @@
     },
     "RES_SMTP_USERNAME": {
       "description": "SMTP authentication username. You'll have to fill this in post-deployment for e-mail to work.",
-      "required": "false"
+      "required": false
     },
     "RES_SMTP_PASSWORD": {
       "description": "SMTP authentication password. You'll have to fill this in post-deployment for e-mail to work.",
-      "required": "false"
+      "required": false
     }
   },
   "addons": [
