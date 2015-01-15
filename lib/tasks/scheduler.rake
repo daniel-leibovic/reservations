@@ -13,7 +13,7 @@ task run_daily_tasks: :environment do
   puts 'Done!'
 end
 
-tasks run_hourly_tasks: :environment do
+task run_hourly_tasks: :environment do
   puts 'Running hourly tasks (notes e-mail)...'
   Rake::Task['send_reservation_notes'].invoke
   puts 'Done!'
