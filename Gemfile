@@ -101,7 +101,10 @@ group :production, :staging do
   gem 'therubyracer', require: 'v8'
   gem 'party_foul'
   gem 'dotenv-deployment'
+  # for Heroku
   gem 'pg'
+  gem 'unicorn'
+  gem 'rack-timeout'
 end
 
 # for Heroku
